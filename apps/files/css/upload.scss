@@ -38,6 +38,7 @@
 	margin-left: 3px;
 }
 #uploadprogressbar {
+	border-radius: 18px 0 0 18px;
 	position:relative;
 	float: left;
 	width: 200px;
@@ -50,9 +51,9 @@
 	}
 }
 #uploadprogressbar .ui-progressbar-value.ui-widget-header.ui-corner-left {
-	height: 100%;
-	top: 0px;
-	left: 0px;
+	height: calc(100% + 2px);
+	top: -1px;
+	left: -1px;
 	position: absolute;
 	overflow: hidden;
 	background-color: var(--color-primary);
@@ -81,8 +82,9 @@
 	display: none;
 }
 
-#uploadprogressbar + stop {
-	font-size: 13px;
+#uploadprogressbar + .stop {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
 }
 
 .oc-dialog .fileexists {
